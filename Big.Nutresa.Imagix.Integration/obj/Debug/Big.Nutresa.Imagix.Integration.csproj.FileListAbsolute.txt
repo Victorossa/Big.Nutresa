@@ -1,0 +1,12 @@
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\bin\Debug\Big.Nutresa.Imagix.Integration.dll
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\bin\Debug\Big.Nutresa.Imagix.Integration.pdb
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.csprojAssemblyReference.cache
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.csproj.CoreCompileInputs.cache
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.dll
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.pdb
+C:\Users\Administrador\Desktop\Proyecto.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\bin\Debug\Big.Nutresa.Imagix.Integration.dll
+C:\Users\Administrador\Desktop\Proyecto.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\bin\Debug\Big.Nutresa.Imagix.Integration.pdb
+C:\Users\Administrador\Desktop\Proyecto.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.csprojAssemblyReference.cache
+C:\Users\Administrador\Desktop\Proyecto.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\Proyecto.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.dll
+C:\Users\Administrador\Desktop\Proyecto.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.Integration\obj\Debug\Big.Nutresa.Imagix.Integration.pdb

@@ -1,0 +1,39 @@
+﻿@model Big.Nutresa.Imagix.UI.Common.Models.CatalogFilterListResponse
+
+@{
+    ViewBag.Title = @Big.Nutresa.Imagix.UI.Idioms.Resource.Catalog;
+}
+
+<h2>  @Big.Nutresa.Imagix.UI.Idioms.Resource.ProductRecommended</h2>
+@Html.Action("PrincipalCategories", "Catalog")
+
+        @Html.Action("ProductRecommendeds", "Catalog")
+
+
+
+<h2>@Big.Nutresa.Imagix.UI.Idioms.Resource.Catalog</h2>
+<div class="container">
+    <div class="col-md-12">
+
+        @if (Model.Data.Count== 0)
+        {
+            <h2>@@Big.Nutresa.Imagix.UI.Idioms.Resource.NoDataAvailable</h2>
+        }
+        @foreach (var item in Model.Data)
+        {
+            <div class="col-md-4">
+
+                <div class="card">
+                    <img class="card-img-top" src="
+             @Big.Nutresa.Imagix.UI.Common.Helpers.ConfigurationHelper.Get("NetCommerce.GetCatalogGenericFilterV2.BaseImageUrl")@Convert.ToString(item.PRODUCT_IMAGE).Replace("~/","")" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.NAME</h5>
+                        <p class="card-text">@item.LONG_DESCRIPTION</p>
+                        <a href="@Url.Action("../Catalog/ProductDetails",new { id=item.GUID })" class="btn btn-primary">@Big.Nutresa.Imagix.UI.Idioms.Resource.ShowDetail<i class="icon-search"></i></a>
+                    </div>
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

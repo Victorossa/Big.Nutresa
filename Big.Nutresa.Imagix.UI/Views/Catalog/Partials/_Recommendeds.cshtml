@@ -1,0 +1,16 @@
+﻿@model Big.Nutresa.Imagix.UI.Common.Models.CatalogFilterListResponse
+@using System.Xml;
+@using System.Globalization;
+@foreach (var item in Model.Data)
+{    
+    <div class="card">
+        <img class="card-img-top" src="
+             @Big.Nutresa.Imagix.UI.Common.Helpers.ConfigurationHelper.Get("NetCommerce.GetCatalogGenericFilterV2.BaseImageUrl")@Convert.ToString(item.PRODUCT_IMAGE).Replace("~/","")" alt="Card image cap" width="300" height="300">
+        <div class="card-body">
+            
+            <h5 class="card-title"> @Big.Nutresa.Imagix.UI.Common.Helpers.XmlHelper.GetValueByCurrentLanguage(Convert.ToString(item.NAME),CultureInfo.CurrentCulture.TwoLetterISOLanguageName)</h5>
+            <p class="card-text">@item.LONG_DESCRIPTION</p>
+            <a href="@Url.Action("../Catalog/ProductDetails",new { id=item.GUID })" class="btn btn-primary">Ver detalle<i class="icon-search"></i></a>
+        </div>
+    </div>
+}

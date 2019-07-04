@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBigNutresaImagixModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6005: The data type 'hierarchyid' is currently not supported for the target Entity Framework version; the column 'Parent' in the table 'dbBigNutresaImagix.dbo.NI_ConfigurationGroup' was excluded.-->
+  <EntityType Name="NI_ConfigurationGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Active" Type="int" Nullable="false" />
+    <Property Name="CreateDate" Type="date" Nullable="false" />
+    <Property Name="ContentProviderClass" Type="nvarchar" MaxLength="512" />
+    <Property Name="ContentProviderSettings" Type="xml" />
+    <Property Name="ProgramId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NI_Program">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="NetCommerce" Type="int" />
+  </EntityType>
+  <Association Name="FK__NI_Config__Progr__300424B4">
+    <End Role="NI_Program" Type="Self.NI_Program" Multiplicity="1" />
+    <End Role="NI_ConfigurationGroup" Type="Self.NI_ConfigurationGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NI_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NI_ConfigurationGroup">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="programId" Type="int" Mode="In" />
+    <Parameter Name="node" Type="nvarchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="dbBigNutresaImagixModelStoreContainer">
+    <EntitySet Name="NI_ConfigurationGroup" EntityType="Self.NI_ConfigurationGroup" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NI_Program" EntityType="Self.NI_Program" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__NI_Config__Progr__300424B4" Association="Self.FK__NI_Config__Progr__300424B4">
+      <End Role="NI_Program" EntitySet="NI_Program" />
+      <End Role="NI_ConfigurationGroup" EntitySet="NI_ConfigurationGroup" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbBigNutresaImagixModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="dbBigNutresaImagixEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS" ReturnType="Collection(dbBigNutresaImagixModel.NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS_Result)">
+      <Parameter Name="programId" Mode="In" Type="Int32" />
+      <Parameter Name="node" Mode="In" Type="String" />
+    </FunctionImport>
+    <EntitySet Name="NI_ConfigurationGroup" EntityType="dbBigNutresaImagixModel.NI_ConfigurationGroup" />
+    <EntitySet Name="NI_Program" EntityType="dbBigNutresaImagixModel.NI_Program" />
+    <AssociationSet Name="FK__NI_Config__Progr__300424B4" Association="dbBigNutresaImagixModel.FK__NI_Config__Progr__300424B4">
+      <End Role="NI_Program" EntitySet="NI_Program" />
+      <End Role="NI_ConfigurationGroup" EntitySet="NI_ConfigurationGroup" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS_Result">
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="Int32" Name="ConfigurationGroupId" Nullable="true" />
+    <Property Type="Int32" Name="ProgramId" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="NI_ConfigurationGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Active" Type="Int32" Nullable="false" />
+    <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="ContentProviderClass" Type="String" MaxLength="512" FixedLength="false" Unicode="true" />
+    <Property Name="ContentProviderSettings" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ProgramId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="NI_Program" Relationship="dbBigNutresaImagixModel.FK__NI_Config__Progr__300424B4" FromRole="NI_ConfigurationGroup" ToRole="NI_Program" />
+  </EntityType>
+  <EntityType Name="NI_Program">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NetCommerce" Type="Int32" />
+    <NavigationProperty Name="NI_ConfigurationGroup" Relationship="dbBigNutresaImagixModel.FK__NI_Config__Progr__300424B4" FromRole="NI_Program" ToRole="NI_ConfigurationGroup" />
+  </EntityType>
+  <Association Name="FK__NI_Config__Progr__300424B4">
+    <End Type="dbBigNutresaImagixModel.NI_Program" Role="NI_Program" Multiplicity="1" />
+    <End Type="dbBigNutresaImagixModel.NI_ConfigurationGroup" Role="NI_ConfigurationGroup" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NI_Program">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="NI_ConfigurationGroup">
+        <PropertyRef Name="ProgramId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

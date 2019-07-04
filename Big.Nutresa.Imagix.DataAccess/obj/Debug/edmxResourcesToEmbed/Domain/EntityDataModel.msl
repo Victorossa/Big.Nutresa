@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbBigNutresaImagixModelStoreContainer" CdmEntityContainer="dbBigNutresaImagixEntities">
+    <FunctionImportMapping FunctionImportName="NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS" FunctionName="dbBigNutresaImagixModel.Store.NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbBigNutresaImagixModel.NI_GET_CONTENT_CONFIGURATION_PROVIDERS_SETTINGS_Result">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ConfigurationGroupId" ColumnName="ConfigurationGroupId" />
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="NI_ConfigurationGroup">
+      <EntityTypeMapping TypeName="dbBigNutresaImagixModel.NI_ConfigurationGroup">
+        <MappingFragment StoreEntitySet="NI_ConfigurationGroup">
+          <ScalarProperty Name="ProgramId" ColumnName="ProgramId" />
+          <ScalarProperty Name="ContentProviderSettings" ColumnName="ContentProviderSettings" />
+          <ScalarProperty Name="ContentProviderClass" ColumnName="ContentProviderClass" />
+          <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NI_Program">
+      <EntityTypeMapping TypeName="dbBigNutresaImagixModel.NI_Program">
+        <MappingFragment StoreEntitySet="NI_Program">
+          <ScalarProperty Name="NetCommerce" ColumnName="NetCommerce" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

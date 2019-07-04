@@ -1,0 +1,12 @@
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\Big.Nutresa.Imagix.DataAccess.dll.config
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\Big.Nutresa.Imagix.DataAccess.dll
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\Big.Nutresa.Imagix.DataAccess.pdb
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\EntityFramework.dll
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\EntityFramework.xml
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\obj\Debug\Big.Nutresa.Imagix.DataAccess.csprojAssemblyReference.cache
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\obj\Debug\Big.Nutresa.Imagix.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\obj\Debug\Big.Nutresa.Imagix.DataAccess.csproj.CopyComplete
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\obj\Debug\Big.Nutresa.Imagix.DataAccess.dll
+C:\Users\david.agudelo\Desktop\Projects\Big.Nutresa.Imagix\Big.Nutresa.Imagix\Big.Nutresa.Imagix.DataAccess\obj\Debug\Big.Nutresa.Imagix.DataAccess.pdb

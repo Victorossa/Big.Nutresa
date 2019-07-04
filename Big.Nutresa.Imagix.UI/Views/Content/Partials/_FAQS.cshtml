@@ -1,0 +1,12 @@
+﻿
+@model  IEnumerable<Big.Nutresa.Imagix.UI.Common.Models.FAQ>
+<ul class="nav nav-tabs">
+    @foreach (var item in Model)
+    {
+        <li class="nav-item">
+            <a class="nav-link active"> @item.answer</a>
+        </li>
+    }
+
+</ul>
+

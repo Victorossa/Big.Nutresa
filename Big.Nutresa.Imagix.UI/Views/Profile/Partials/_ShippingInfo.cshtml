@@ -1,0 +1,32 @@
+﻿@model  IEnumerable<Big.Nutresa.Imagix.UI.Common.Models.ShippingInfoResponse>
+<div class="container">
+
+<div class="row">
+
+    @foreach (Big.Nutresa.Imagix.UI.Common.Models.ShippingInfoResponse item in Model)
+    {
+        <div class="col-sm-6" style="padding:2px;">
+            <div class="card" style="background-color:mediumaquamarine">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Address</h5>
+                    <p class="card-text">@item.AditionalInfo</p>
+                    <p class="card-text">@item.State ,@item.Country @item.City</p>
+                    <a href="@Url.Action("../Profile/ModifyShippingInfo", new { id=item.Guid})" class="btn btn-primary">@Big.Nutresa.Imagix.UI.Idioms.Resource.Modify</a>
+                    
+                    @using (Html.BeginForm("DeleteShippingInfo", "Profile"))
+                    {
+                        @Html.AntiForgeryToken()
+                        @Html.Hidden("id", (string)item.Guid)
+                        <input type="submit" value="@Big.Nutresa.Imagix.UI.Idioms.Resource.Delete" class="btn btn-danger" />
+                    }
+
+                </div>
+            </div>
+        </div>
+
+
+
+    }
+
+</div>
+</div>

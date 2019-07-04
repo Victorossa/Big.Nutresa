@@ -1,0 +1,12 @@
+﻿@model  IEnumerable<Big.Nutresa.Imagix.UI.Common.Models.CategoryResponse>
+    <ul class="nav nav-tabs">
+        @foreach (var item in Model)
+        {
+            <li class="nav-item">
+                <a class="nav-link active" href="@Url.Action("../Catalog",new { id=item.Id })">@item.Name</a>
+            </li>
+        }
+
+    </ul>
+  
+  

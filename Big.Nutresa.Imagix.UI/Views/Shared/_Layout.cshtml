@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="@Url.Content("~/Scripts/js/Dev.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Content/js/html5shiv.min.js")"></script>
+    <script src="@Url.Content("~/Content/js/respond.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/vendor/jquery.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/vendor/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/vendor/bootstrap.bundle.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/vendor/slick.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/Content/js/vendor/prefixfree.min.js")"></script>
+    
+</head>
+<body>
+    @Html.Partial("~/Views/Shared/Partials/_Modals.cshtml")
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            @Html.Partial("~/Views/Shared/Partials/_AboutHeader.cshtml")
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                @Html.ActionLink(@Big.Nutresa.Imagix.UI.Idioms.Resource.AppName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @{
+                        foreach (var i in Big.Nutresa.Imagix.UI.Helpers.LanguageMang.AvailableLanguages)
+                        {
+                            @Html.ActionLink(i.LanguageFullName, "ChangeLanguage", "Home", new { lang = i.LanguageCultureName, ReturnUrl = Request.Url.AbsolutePath }, null)
+                        }
+                    }
+                    <li>@Html.ActionLink(@Big.Nutresa.Imagix.UI.Idioms.Resource.MyProfile, "Index", "profile")</li>
+                    <li>@Html.ActionLink(@Big.Nutresa.Imagix.UI.Idioms.Resource.Catalog, "Index", "Catalog")</li>
+                    <li>@Html.ActionLink(@Big.Nutresa.Imagix.UI.Idioms.Resource.MyRedemptions, "MyRedemptions", "Redemption")</li>
+                    <li>@Html.ActionLink(@Big.Nutresa.Imagix.UI.Idioms.Resource.Login, "Login", "Account")</li>
+                    <li>
+                        <a>
+                            @string.Format(Big.Nutresa.Imagix.UI.Idioms.Resource.Hello, User.Identity.Name)
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @Big.Nutresa.Imagix.UI.Idioms.Resource.AppName</p>
+        </footer>
+    </div>
+
+    <script>
+        @Html.Raw(ViewBag.StartUpScript)
+    </script>
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
